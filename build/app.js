@@ -43909,11 +43909,11 @@ var SolidityEvent = require("web3/lib/web3/event.js");
 
 },{"web3":137,"web3/lib/web3/event.js":164}],223:[function(require,module,exports){
 module.exports = {
-  "ConvertLib": require("/home/laurence/tempo/testTruffle/build/contracts/ConvertLib.sol.js"),
-  "TestContract": require("/home/laurence/tempo/testTruffle/build/contracts/TestContract.sol.js"),
-  "Migrations": require("/home/laurence/tempo/testTruffle/build/contracts/Migrations.sol.js"),
+  "ConvertLib": require("/home/laurence/tempo/ExampleTruffle/build/contracts/ConvertLib.sol.js"),
+  "Migrations": require("/home/laurence/tempo/ExampleTruffle/build/contracts/Migrations.sol.js"),
+  "TestContract": require("/home/laurence/tempo/ExampleTruffle/build/contracts/TestContract.sol.js"),
 };
-},{"/home/laurence/tempo/testTruffle/build/contracts/ConvertLib.sol.js":220,"/home/laurence/tempo/testTruffle/build/contracts/Migrations.sol.js":221,"/home/laurence/tempo/testTruffle/build/contracts/TestContract.sol.js":222}]},{},[223])(223)
+},{"/home/laurence/tempo/ExampleTruffle/build/contracts/ConvertLib.sol.js":220,"/home/laurence/tempo/ExampleTruffle/build/contracts/Migrations.sol.js":221,"/home/laurence/tempo/ExampleTruffle/build/contracts/TestContract.sol.js":222}]},{},[223])(223)
 });
 
 //// TRUFFLE BOOTSTRAP                                          
@@ -43946,7 +43946,7 @@ window.addEventListener('load', function() {
 
                                                                 
 
-  [ConvertLib,Migrations,TestContract].forEach(function(contract) {         
+  [ConvertLib,TestContract,Migrations].forEach(function(contract) {         
 
     contract.setProvider(window.web3.currentProvider);          
 
