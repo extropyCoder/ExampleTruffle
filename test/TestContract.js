@@ -1,13 +1,12 @@
 contract('TestContract', function(accounts) {
   it("should behave", function() {
-    var testo = TestContract.deployed();
+    var testc = TestContract.deployed();
 
-    return testo.getGroups.call().then(function(theseGroups) {
-      console.log(theseGroups);
-      for (ii=0;ii<theseGroups.length;ii++){
-        console.log(web3.toAscii(theseGroups[ii]));
+    return testc.getNames.call().then(function(theseNames) {
+      for (ii=0;ii<theseNames.length;ii++){
+        console.log(web3.toAscii(theseNames[ii]));
       }
-
+      return assert.equal(theseNames.length,4);
 
     });
   });

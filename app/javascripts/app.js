@@ -2,19 +2,20 @@ var accounts;
 var account;
 
 
-function displayGroups(){
-  var testo = TestContract.deployed();
-  var groupsTag = document.getElementById("groups");
-  return testo.getGroups.call().then(function(theseGroups) {
-    console.log(theseGroups);
-    groupsTag.innerhtml = "Groups";
-    for (ii=0;ii<theseGroups.length;ii++){
-      var groupName = web3.toAscii(theseGroups[ii]);
-      console.log(groupName);
+function displayNames(){
+  var testc = TestContract.deployed();
+  var namesTag = document.getElementById("names");
+  namesTag.length = 0;
+  return testc.getNames.call().then(function(theseNames) {
+    console.log(theseNames);
+    namesTag.innerhtml = "Names";
+    for (ii=0;ii<theseNames.length;ii++){
+      var name = web3.toAscii(theseNames[ii]);
+      console.log(name);
       var opt = document.createElement('option');
       opt.value = ii;
-      opt.innerHTML = groupName;
-      groupsTag.appendChild(opt);
+      opt.innerHTML = name;
+      namesTag.appendChild(opt);
 //      groupsTag.innerhtml += groupName + "<br>"
     }
   });
